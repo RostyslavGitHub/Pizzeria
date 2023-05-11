@@ -1,0 +1,20 @@
+mixin menu__item(menuItemData)
+  .menu__item
+    img.menu__item__img(src=menuItemData.img alt="")
+    .menu__item__title= menuItemData.title
+    .menu__item__description= menuItemData.description
+    .price-order__row
+      .price= menuItemData.price + ' ' + 'usd'
+      button.menu__item__button order this one
+
+  .popup
+    .menu__item
+      div.popup-closer X
+      img.menu__item__img(src=menuItemData.img alt="")
+      div.menu__item__title= menuItemData.title
+      form.popup__form
+        input.input(type="text", name="name:", value="Adress")
+        input.input(type="email", name="mail:", value="Number for a SMS")
+      div.price-order__row
+        div.price= menuItemData.price + ' ' + 'usd'
+        button.popup__menu__item__button confirm order 

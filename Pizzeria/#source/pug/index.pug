@@ -1,0 +1,51 @@
+include data/data
+include data/mixins
+
+doctype html
+html
+  head
+    title Pizza restaurant
+    link(rel="icon", href="img/pizza-slice.ico")
+    link(rel="stylesheet", href="css/style.css")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+  body
+   
+    .wraper 
+      include includes/header
+
+      include includes/top-section
+
+      .content
+        .menu#menu
+          h2.menu__title Menu
+          .menu__nav
+            a.menu__nav__section-link(href="index.html#menu") all
+            a.menu__nav__section-link(href="mushrooms.html#menu") mushrooms
+            a.menu__nav__section-link(href="meat.html#menu") meat
+            a.menu__nav__section-link(href="cheese.html#menu") cheese
+          .menu__items__row
+            +menu__item(standart)
+            +menu__item(meat)
+            +menu__item(cheese)
+            +menu__item(mushrooms)
+            +menu__item(standart)
+            +menu__item(standart)
+            +menu__item(standart)
+            +menu__item(standart)
+            +menu__item(standart)
+
+      include includes/about-us
+      
+      include includes/contacts
+      
+      include includes/footer
+
+      button.scroll-to-top(onclick='scrollToTop()')
+        .arrow-up
+      
+      .to-close
+      
+      
+
+      script(src='js/script.js')
