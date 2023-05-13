@@ -52,7 +52,7 @@ const inputElement = document.getElementsByClassName("input");
 if (inputElement) {
   for (let i = 0; i < inputElement.length; i++) {
     inputElement[i].addEventListener("focus", function() {
-      if (inputElement[i].value === "Adress" || inputElement[i].value === "Number for a SMS"){
+      if (inputElement[i].value === "Adress" || inputElement[i].value === "Your number for the SMS"){
         inputElement[i].value = "";
       } 
     });
@@ -61,11 +61,11 @@ if (inputElement) {
         if(i === 0 ){
           inputElement[i].value = "Adress";
         } else if (i === 1 ){
-          inputElement[i].value = "Number for a SMS";
+          inputElement[i].value = "Your number for the SMS";
         } else if(i === 2 ){
           inputElement[i].value = "Adress";
         } else if (i === 3 ){
-          inputElement[i].value = "Number for a SMS";
+          inputElement[i].value = "Your number for the SMS";
         }
       }
     });
@@ -82,6 +82,7 @@ if (popUp) {
     menuItemButton[i].addEventListener("click", function() {
       popUp[i].style.opacity = "1";
       popUp[i].style.visibility = "visible";
+      burgerMenu.style.display="none";
       closeArea.classList.add('_close_area');
       document.querySelector('.scroll-to-top').style.display = 'none';
       body.classList.add('_stop-scroll');
@@ -93,6 +94,7 @@ if (popUp) {
         toClosePopUp[j].addEventListener("click", function() {
           popUp[i].style.opacity = "0";
           popUp[i].style.visibility = "hidden";
+          burgerMenu.style.display="block";
           closeArea.classList.remove('_close_area');
           body.classList.remove('_stop-scroll');
         });
@@ -100,6 +102,23 @@ if (popUp) {
     }
   }
 }
+
+const successPopUpButton = document.getElementsByClassName("success-popup-button");
+const successPopUp = document.querySelector(".success-popup")
+let removeSuccessPopUp = () => successPopUp.classList.remove("_active-popup");
+if(successPopUpButton){
+  for (let i = 0; i < successPopUpButton.length; i++){
+    successPopUpButton[i].addEventListener("click", function(){
+      popUp[i].style.opacity = "0";
+      popUp[i].style.visibility = "hidden";
+      successPopUp.classList.add("_active-popup");
+      closeArea.classList.remove('_close_area');
+      body.classList.remove('_stop-scroll');
+      setTimeout(removeSuccessPopUp, 3000);
+      
+  })
+}
+};
 
 
 if(closeArea){

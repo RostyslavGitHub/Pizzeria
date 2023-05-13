@@ -14,7 +14,7 @@ mixin menu__item(menuItemData)
       div.menu__item__title= menuItemData.title
       form.popup__form
         input.input(type="text", name="name:", value="Adress")
-        input.input(type="email", name="mail:", value="Number for a SMS")
+        input.input(type="email", name="mail:", value="Your number for the SMS")
       div.price-order__row
         div.price= menuItemData.price + ' ' + 'usd'
-        button.popup__menu__item__button confirm order 
+        button.popup__menu__item__button.success-popup-button confirm order 
