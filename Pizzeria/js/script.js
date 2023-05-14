@@ -113,6 +113,7 @@ if(successPopUpButton){
       popUp[i].style.visibility = "hidden";
       successPopUp.classList.add("_active-popup");
       closeArea.classList.remove('_close_area');
+      burgerMenu.style.display="block";
       body.classList.remove('_stop-scroll');
       setTimeout(removeSuccessPopUp, 3000);
       
@@ -128,5 +129,6 @@ if(closeArea){
 		popUp[i].style.opacity = "0";
     popUp[i].style.visibility = "hidden";}
 		body.classList.remove('_stop-scroll');
+    burgerMenu.style.display="block";
 	});
 };
