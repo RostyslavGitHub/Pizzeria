@@ -540,6 +540,15 @@ a {
   right: 0;
   opacity: 0;
   visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 3% calc(50% - 210px);
   text-align: center;
   z-index: 1000;
@@ -643,6 +652,17 @@ a {
   }
   .header__nav__number {
     margin: 20px 20px;
+  }
+  .popup {
+    margin: 60px calc(50% - 210px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .popup .menu__item {
+    width: 420px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin: 0px 10px 80px 10px;
   }
 }
 @media (max-width: 775px) {

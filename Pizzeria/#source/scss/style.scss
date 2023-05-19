@@ -399,6 +399,9 @@ a{
 	right: 0;
 	opacity: 0;
 	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 3% calc(50% - 210px);
 	text-align: center;
 	z-index: 1000;
@@ -505,6 +508,16 @@ a{
 	}
 	.header__nav__number{
 		margin: 20px 20px;
+	}
+
+	.popup{
+		margin: 60px calc(50% - 210px);
+		transition: 0.5s;
+			.menu__item{
+				width: 420px;
+				transition: 0.5s;
+				margin: 0px 10px 80px 10px;
+			}
 	}
 }
 

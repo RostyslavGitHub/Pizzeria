@@ -18,7 +18,6 @@ if (burgerMenu){
     for (let j = 0; j < popUp.length; j++) {
         popUp[j].style.opacity = "0";
         popUp[j].style.visibility = "hidden";
-        closeArea.classList.remove('_close_area');
       }
       body.classList.remove('_stop-scroll');
       closeArea.classList.toggle('_close_area');
@@ -38,7 +37,10 @@ if (menuItemLink) {
         popUp[j].style.visibility = "hidden";
       }
       body.classList.remove('_stop-scroll');
-      
+      if(innerWidth < 1099){
+            header.style.visibility='visible';
+            header.style.opacity="1";
+          }
     });
   }
 }
@@ -92,6 +94,7 @@ if (inputElement) {
 const body = document.querySelector('body');
 const popUp = document.getElementsByClassName('popup');
 const menuItemButton = document.getElementsByClassName('menu__item__button');
+const header = document.querySelector('header');
 
 if (popUp) {
   for (let i = 0; i < menuItemButton.length; i++) {
@@ -101,6 +104,10 @@ if (popUp) {
       closeArea.classList.add('_close_area');
       document.querySelector('.scroll-to-top').style.display = 'none';
       body.classList.add('_stop-scroll');
+      if(innerWidth < 1099){
+            header.style.visibility='hidden';
+            header.style.opacity="0";
+          }
     });
 
     const toClosePopUp = document.getElementsByClassName('popup-closer');
@@ -112,6 +119,10 @@ if (popUp) {
           burgerMenu.style.display="block";
           closeArea.classList.remove('_close_area');
           body.classList.remove('_stop-scroll');
+          if(innerWidth < 1099){
+            header.style.visibility='visible';
+            header.style.opacity="1";
+          }
         });
       }
     }
@@ -131,7 +142,10 @@ if(successPopUpButton){
       burgerMenu.style.display="block";
       body.classList.remove('_stop-scroll');
       setTimeout(removeSuccessPopUp, 3000);
-      
+      if(innerWidth < 1099){
+            header.style.visibility='visible';
+            header.style.opacity="1";
+          }
   })
 }
 };
@@ -144,6 +158,9 @@ if(closeArea){
     popUp[i].style.opacity = "0";
     popUp[i].style.visibility = "hidden";}
     body.classList.remove('_stop-scroll');
-    burgerMenu.style.display="block";
+    if(innerWidth < 1099){
+        header.style.visibility='visible';
+        header.style.opacity="1";
+      }
   });
 };
