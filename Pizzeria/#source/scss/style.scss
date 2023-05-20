@@ -402,7 +402,7 @@ a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 3% calc(50% - 210px);
+	margin: 0 calc(50% - 210px);
 	text-align: center;
 	z-index: 1000;
 	height: 100%;
@@ -511,7 +511,7 @@ a{
 	}
 
 	.popup{
-		margin: 60px calc(50% - 210px);
+		margin: 0 calc(50% - 210px);
 		transition: 0.5s;
 			.menu__item{
 				width: 420px;
@@ -553,7 +553,6 @@ a{
 
 @media (max-width: 460px) {
 		.popup{
-		margin: 3% 0px;
 		.menu__item{
 			width: 94%;
 		}
@@ -569,7 +568,6 @@ a{
 		}
 	}
 	.popup{
-		margin: 3% 0px;
 		.menu__item{
 			width: 86%;
 			img{

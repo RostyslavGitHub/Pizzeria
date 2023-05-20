@@ -549,7 +549,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3% calc(50% - 210px);
+  margin: 0 calc(50% - 210px);
   text-align: center;
   z-index: 1000;
   height: 100%;
@@ -654,7 +654,7 @@ a {
     margin: 20px 20px;
   }
   .popup {
-    margin: 60px calc(50% - 210px);
+    margin: 0 calc(50% - 210px);
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
@@ -695,9 +695,6 @@ a {
   }
 }
 @media (max-width: 460px) {
-  .popup {
-    margin: 3% 0px;
-  }
   .popup .menu__item {
     width: 94%;
   }
@@ -707,9 +704,6 @@ a {
     margin: 0 15px;
     width: 350px;
     height: 215px;
-  }
-  .popup {
-    margin: 3% 0px;
   }
   .popup .menu__item {
     width: 86%;
