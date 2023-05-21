@@ -706,6 +706,7 @@ a {
     height: 215px;
   }
   .popup .menu__item {
+    margin: 0 40px;
     width: 86%;
   }
   .popup .menu__item img {
